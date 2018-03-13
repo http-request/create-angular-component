@@ -6,9 +6,9 @@ const printHelp = () => {
     const name = 'Create Angular Component (cngc)';
     const usage = 'Usage: cngc <component-name>';
     const hint = 'For create a new angular component please enter component name in "kebab-case", for example:';
-    const example = '$ cngc hello-world-component';
+    const example = '$ cngc hello-world';
 
-    console.log(`${name}\n\n${usage}\n\n${hint}\n${example}\n`);
+    console.log(`\n${name}\n\n${usage}\n\n${hint}\n${example}\n`);
 };
 
 const createComponent = (componentName) => {
