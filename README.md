@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/create-angular-component.svg)](https://badge.fury.io/js/create-angular-component)
 # create-angular-component (cngc)
 CLI tool for creating Angular2+ components.
 
