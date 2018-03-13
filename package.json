@@ -1,6 +1,6 @@
 {
   "name": "create-angular-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for creating angular components",
   "main": "index.js",
   "bin": {
