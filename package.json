@@ -10,9 +10,18 @@
     "type": "git",
     "url": "git+https://github.com/http-request/create-angular-component.git"
   },
-  "keywords": [],
+  "keywords": [
+    "angular",
+    "create",
+    "component",
+    "cli",
+    "tool",
+    "template",
+    "ng"
+  ],
   "author": {
-    "name": "Svyatoslav Strygin"
+    "name": "Svyatoslav Strygin",
+    "email": "strygin@outlook.com"
   },
   "license": "MIT",
   "bugs": {
