@@ -1,0 +1,24 @@
+{
+  "name": "create-angular-component",
+  "version": "1.0.0",
+  "description": "CLI for create angular components",
+  "main": "index.js",
+  "bin": {
+    "cngc": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/http-request/create-angular-component.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/http-request/create-angular-component/issues"
+  },
+  "homepage": "https://github.com/http-request/create-angular-component#readme",
+  "dependencies": {
+    "optimist": "^0.6.1",
+    "uppercamelcase": "^3.0.0"
+  }
+}
