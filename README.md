@@ -18,6 +18,8 @@ Tool will create `hello-world` folder with following component files:
 - hello-world.component.html 
 - hello-world.component.styl 
 - hello-world.component.ts 
+- hello-world.module.ts
+- index.ts
 
 Each file will have default content:
 
@@ -43,9 +45,35 @@ import {Component} from '@angular/core';
     templateUrl: './hello-world.component.html',
     styleUrls: ['./hello-world.component.styl']
 })
-export class HelloWorld {
+export class HelloWorldComponent {
     
 }
+```
+
+`hello-world.module.ts`
+```typescript
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HelloWorldComponent} from './hello-world.component';
+    
+@NgModule({
+    imports: [
+        CommonModule
+    ],
+    declarations: [
+        HelloWorldComponent
+    ],
+    exports: [
+        HelloWorldComponent
+    ],
+})
+export class HelloWorldModule {}
+```
+
+`index.ts`
+```typescript
+export * from './hello-world.component';
+export * from './hello-world.module';
 ```
 
 # License

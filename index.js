@@ -20,22 +20,44 @@ const createComponent = (componentName) => {
         const className = upperCamelCase(componentName);
 
         const templateFileName = `${componentName}.component.html`;
-        const templateContent = `<div class=".${componentName}"></div>`;
+        const templateContent = `<div class=".${componentName}"></div>\n`;
 
         const stylesFileName = `${componentName}.component.styl`;
-        const stylesContent = `.${componentName} {\n    \n}`;
+        const stylesContent = `.${componentName} {\n    \n}\n`;
 
+        const componentClassName = `${className}Component`;
         const scriptFileName = `${componentName}.component.ts`;
         const scriptContent = `import {Component} from '@angular/core';\n\n`
             + `@Component({\n`
             + `    selector: '${componentName}',\n`
             + `    templateUrl: './${templateFileName}',\n`
             + `    styleUrls: ['./${stylesFileName}']\n`
-            + `})\nexport class ${className} {\n    \n}`;
+            + `})\nexport class ${componentClassName} {\n    \n}\n`;
+
+        const moduleClassName = `${className}Module`;
+        const moduleFileName = `${componentName}.module.ts`;
+        const moduleContent = `import {NgModule} from '@angular/core';\n`
+            + `import {CommonModule} from '@angular/common';\n`
+            + `import {${componentClassName}} from './${componentName}.component';\n\n`
+            + `@NgModule({\n`
+            + `    imports: [\n`
+            + `        CommonModule\n    ],\n`
+            + `    declarations: [\n`
+            + `        ${componentClassName}\n    ],\n`
+            + `    exports: [\n`
+            + `        ${componentClassName}\n    ]\n})\n`
+            + `export class ${moduleClassName} {}\n`;
+
+
+        const indexFileName = 'index.ts';
+        const indexContent = `export * from './${componentName}.component';\n`
+            + `export * from './${componentName}.module';\n`;
 
         fs.appendFileSync(`${componentDir}${templateFileName}`, templateContent);
         fs.appendFileSync(`${componentDir}${stylesFileName}`, stylesContent);
         fs.appendFileSync(`${componentDir}${scriptFileName}`, scriptContent);
+        fs.appendFileSync(`${componentDir}${moduleFileName}`, moduleContent);
+        fs.appendFileSync(`${componentDir}${indexFileName}`, indexContent);
 
         console.log(`Component '${componentName}' has been created successfully.`);
     } catch (error) {
