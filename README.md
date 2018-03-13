@@ -65,7 +65,7 @@ import {HelloWorldComponent} from './hello-world.component';
     ],
     exports: [
         HelloWorldComponent
-    ],
+    ]
 })
 export class HelloWorldModule {}
 ```
