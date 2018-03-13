@@ -1,9 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 const upperCamelCase = require('uppercamelcase');
+const pkg = require('./package');
 
 const printHelp = () => {
-    const name = 'Create Angular Component (cngc)';
+    const name = `Create Angular Component (cngc)\nVersion: ${pkg.version}`;
     const usage = 'Usage: cngc <component-name>';
     const hint = 'For create a new angular component please enter component name in "kebab-case", for example:';
     const example = '$ cngc hello-world';
@@ -75,8 +76,10 @@ const createComponent = (componentName) => {
     }
 };
 
-module.exports = (params) => {
-    if (!params.length) {
+module.exports = (argv) => {
+    const params = argv._;
+
+    if (argv.help || !params.length) {
         printHelp();
     } else {
         createComponent(params[0]);

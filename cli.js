@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-const params = require('optimist').argv._;
+const argv = require('optimist').argv;
 
-require('./')(params);
+require('./')(argv);
