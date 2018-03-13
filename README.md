@@ -7,7 +7,7 @@ CLI tool for creating Angular2+ components.
 # Usage
 `$ cngc <component-name>`
 
-where <component-name> in kebab-case.
+where `<component-name>` in kebab-case.
 
 # Example:
 1. Open directory in console where you want to create a component.
@@ -49,4 +49,4 @@ export class HelloWorld {
 ```
 
 # License
-[MIT](https://github.com/http-request/create-angular-component/blob/master/LICENSE)© Svyatoslav Strygin  
+[MIT](https://github.com/http-request/create-angular-component/blob/master/LICENSE) © Svyatoslav Strygin  
