@@ -1,7 +1,7 @@
 {
   "name": "create-angular-component",
   "version": "1.0.0",
-  "description": "CLI for create angular components",
+  "description": "CLI for creating angular components",
   "main": "index.js",
   "bin": {
     "cngc": "cli.js"
@@ -11,8 +11,10 @@
     "url": "git+https://github.com/http-request/create-angular-component.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name": "Svyatoslav Strygin"
+  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/http-request/create-angular-component/issues"
   },

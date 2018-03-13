@@ -12,7 +12,7 @@ const printHelp = () => {
 };
 
 const createComponent = (componentName) => {
-    const componentDir = `${__dirname}${path.sep}${componentName}${path.sep}`;
+    const componentDir = `${process.cwd()}${path.sep}${componentName}${path.sep}`;
 
     try {
         fs.mkdirSync(componentDir);
