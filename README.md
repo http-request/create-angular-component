@@ -1,15 +1,15 @@
 # create-angular-component (cngc)
 CLI tool for creating Angular2+ components.
 
-#Install
+# Install
 `$ npm install -g create-angular-component`
 
-#Usage
+# Usage
 `$ cngc <component-name>`
 
 where <component-name> in kebab-case.
 
-#Example:
+# Example:
 1. Open directory in console where you want to create a component.
 2. Type `cngc hello-world`
 
@@ -48,5 +48,5 @@ export class HelloWorld {
 }
 ```
 
-#License
+# License
 [MIT](https://github.com/http-request/create-angular-component/blob/master/LICENSE)© Svyatoslav Strygin  
